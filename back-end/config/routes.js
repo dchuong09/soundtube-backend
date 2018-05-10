@@ -10,6 +10,7 @@ router.get('/api/videos/:video_id', videoController.show);
 
 // Comment Routers 
 router.get('/api/videos/:video_id/comments', commentController.index);
+router.get('/api/videos/:video_id/comments/:comment_id', commentController.show);
 router.post('/api/videos/:video_id/comments', commentController.create);
 router.delete('/api/videos/:video_id/comments/:comment_id', commentController.destroy);
 

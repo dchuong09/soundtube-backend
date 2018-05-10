@@ -21,14 +21,15 @@ function show(req, res) {
 
 function create(req, res) {
 	Comment.create(req.body, function(err, commentSuccess) {
-		if (err) res.send('Comment create controller: ', err);
+		// console.log(req)
+		if (err) console.log('Comment create controller: ', err);
 		else {
 			Video.findById(req.params.video_id, function(err, videoSuccess) {
 				if (err) res.send('Comment create controller: ', err);
 				else {
 					videoSuccess.comments.push(commentSuccess);
 					videoSuccess.save();
-					res.json(videoSuccess);
+					res.json(commentSuccess);
 				}
 			})
 		}

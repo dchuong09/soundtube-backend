@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 
 const CommentSchema = new Schema({
 	name: String, 
-	comment: String
+	comments: String
 })
 
 const Comment = mongoose.model('Comment', CommentSchema);
