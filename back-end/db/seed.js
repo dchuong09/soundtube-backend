@@ -1,5 +1,7 @@
 const models = require('../models');
 
+
+// Comment Data
 const commentsData = [{
 	name: 'jacob',
 	comments: 'nice video'
@@ -11,6 +13,8 @@ const commentsData = [{
 	comments: 'nice movie'
 }]
 
+
+// Recommendation Data
 const recommendationsData = [{
 	name: 'David Bowie',
 	recommendations: 'I want more dubsteb'
@@ -18,6 +22,36 @@ const recommendationsData = [{
 	name: 'Aphextwin 1', 
 	recommendations: 'I want more spaghetti'
 }]
+
+
+// Video Data
+const videosData = [{
+	title: 'PYNK',
+	category: 'music',
+	votes: 5,
+	videoUrl: 'https://www.youtube.com/watch?v=PaYvlVR_BEc',
+	videoDesc: 'blah blah',
+	videoThumbnail: 'blah', 
+	comments: [commentsData[0]]
+}, {
+	title: 'This is America',
+	category: 'music',
+	votes: 12,
+	videoUrl: 'https://www.youtube.com/watch?v=VYOjWnS4cMY',
+	videoDesc: 'blah blah',
+	videoThumbnail: 'blah', 
+	comments: [commentsData[2]]
+}, {
+	title: 'Mirage',
+	category: 'music',
+	votes: 2,
+	videoUrl: 'https://www.youtube.com/watch?v=mfJC34tOZms',
+	videoDesc: 'blah blah',
+	videoThumbnail: 'blah', 
+	comments: [commentsData[1]]
+}]
+
+
 
 models.Recommendation.remove({}, function(err, res) {
 	if (err) {
@@ -58,28 +92,7 @@ models.Comment.remove({}, function(err, res) {
 			}
 			console.log('Remove all Videos'); 
 
-			models.Video.create([{
-				title: 'PYNK',
-				category: 'music',
-				videoUrl: 'https://www.youtube.com/watch?v=PaYvlVR_BEc',
-				videoDesc: 'blah blah',
-				videoThumbnail: 'blah', 
-				comments: [comments[0]]
-			}, {
-				title: 'This is America',
-				category: 'music',
-				videoUrl: 'https://www.youtube.com/watch?v=VYOjWnS4cMY',
-				videoDesc: 'blah blah',
-				videoThumbnail: 'blah', 
-				comments: [comments[2]]
-			}, {
-				title: 'Mirage',
-				category: 'music',
-				videoUrl: 'https://www.youtube.com/watch?v=mfJC34tOZms',
-				videoDesc: 'blah blah',
-				videoThumbnail: 'blah', 
-				comments: [comments[1]]
-			}], function(err, videos) {
+			models.Video.create(videosData, function(err, videos) {
 				if (err) {
 					console.log('Error creating Videos ', err);
 					return;
