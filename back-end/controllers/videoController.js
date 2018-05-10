@@ -15,5 +15,7 @@ function show(req, res) {
 	})
 }
 
-module.exports.index = index;
-module.exports.show = show;
+module.exports = {
+	index: index, 
+	show: show
+}

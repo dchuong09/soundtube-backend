@@ -43,7 +43,7 @@ function destroy(req, res) {
 			if (commentToDelete) {
 				commentToDelete.remove();
 				foundVideo.save(function(err, saved) {
-					console.log('REMOVED ', commentToDelete._id, 'FROM ', post.comments);
+					console.log('REMOVED ', commentToDelete._id, 'FROM ', foundVideo.comments);
 					res.json(commentToDelete);
 				})
 			} else {
