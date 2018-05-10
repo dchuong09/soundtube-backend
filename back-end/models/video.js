@@ -5,6 +5,7 @@ const mongoose = require('mongoose');
 const VideoSchema = new Schema({
 	title: String, 
 	category: String, 
+	votes: Number,
 	videoUrl: String, 
 	videoDesc: String, 
 	videoThumbnail: String,
