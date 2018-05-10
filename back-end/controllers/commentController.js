@@ -34,3 +34,36 @@ function create(req, res) {
 		}
 	});
 }
+
+function destroy(req, res) {
+	Video.findById(req.params.video_id, function(err, foundVideo) {
+		if (err) res.send('Comment destroy controllers: ', err);
+		else {
+			let commentToDelete = foundVideo.comments.id(req.params.comment_id);
+			if (commentToDelete) {
+				commentToDelete.remove();
+				foundVideo.save(function(err, saved) {
+					console.log('REMOVED ', commentToDelete._id, 'FROM ', post.comments);
+					res.json(commentToDelete);
+				})
+			} else {
+				res.send(404);
+			}
+		}
+	})
+}
+
+
+module.exports = {
+	index: index,
+	create: create,
+	show: show,
+	destroy: destroy
+};
+
+
+
+
+
+
+
