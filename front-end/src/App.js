@@ -4,6 +4,7 @@ import {Switch, Route} from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import VideosPage from './pages/VideosPage';
 import VideoPage from './pages/VideoPage';
+import RecommendationPage from './pages/RecommendationPage';
 
 class App extends Component {
   render() {
@@ -14,6 +15,7 @@ class App extends Component {
           <Switch>
             <Route exact path='/' component={HomePage} />
             <Route exact path='/api/videos' component={VideosPage} />
+            <Route exact path='/api/recommendations'component={RecommendationPage} />
             <Route path='/api/videos/:video_id' component={VideoPage} />
           </Switch>
         </main>

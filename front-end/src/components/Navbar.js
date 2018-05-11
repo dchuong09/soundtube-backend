@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom'
 
 
 const Navbar = () => {
@@ -6,10 +7,10 @@ const Navbar = () => {
 
 		<nav>
 		    <div className="nav-wrapper">
-		      <a  className="brand-logo">Logo</a>
+		      <Link to='/api/videos'  className="brand-logo">Logo</Link>
 		      <ul id="nav-mobile" className="right hide-on-med-and-down">
-		        <li><a href="sass.html">Recommended</a></li>
-		        <li><a href="badges.html">Trending</a></li>
+		        <li><Link to='/api/recommendations'>Recommended</Link></li>
+		        <li><Link to='/api/videos'>Trending</Link></li>
 		      </ul>
 		    </div>
 		</nav>

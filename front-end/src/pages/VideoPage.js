@@ -1,9 +1,11 @@
 import React, {Component} from 'react';
+import Navbar from '../components/Navbar';
+import '../App.css'
 
 class VideoPage extends Component {
 
 	state = {
-		videos: {},
+		video: {},
 		comments: '',
 		name: ''
 	}
@@ -12,8 +14,8 @@ class VideoPage extends Component {
 		let videoId = this.props.match.params.video_id;
 		fetch(`http://localhost:8080/api/videos/${videoId}`)
 		  .then(res => res.json())
-		  .then(videos => {
-		  	this.setState({ videos })
+		  .then(video => {
+		  	this.setState({ video })
 		  })
 		  .catch(err => console.log('Video Page render data err ', err))
 	}
@@ -22,6 +24,32 @@ class VideoPage extends Component {
 	handleNameChange = (e) => {
 		this.setState({ name: e.target.value });
 		
+	}
+
+	handleVotes = () => {
+		let videoId = this.props.match.params.video_id;
+		let updatedVote = this.state.video.votes + 1;
+		fetch(`http://localhost:8080/api/videos/${videoId}`, {
+			method: 'PUT',
+			headers: {
+		    'Accept': 'application/json',
+		    'Content-Type': 'application/json',
+		  },
+		  body: JSON.stringify({
+			votes: updatedVote,
+		  })
+		}).then(res => {
+			return res.json();
+		}).then(video => {
+			
+			this.setState({
+				video: {
+					...video,
+					votes: updatedVote
+				}
+			})
+	         
+		})
 	}
 
 	handleCommentChange = (e) => {
@@ -55,15 +83,15 @@ class VideoPage extends Component {
 			// })
 			
 			this.setState({
-				videos: {
-					title: this.state.videos.title, 
-					category: this.state.videos.category,
-					artist: this.state.videos.artist, 
-					votes: this.state.videos.votes,
-					videoUrl: this.state.videos.videoUrl, 
-					videoDesc: this.state.videos.videoDesc, 
-					videoThumbnail: this.state.videos.videoThumbnail,
-					comments: this.state.videos.comments.concat(json)
+				video: {
+					title: this.state.video.title, 
+					category: this.state.video.category,
+					artist: this.state.video.artist, 
+					votes: this.state.video.votes,
+					videoUrl: this.state.video.videoUrl, 
+					videoDesc: this.state.video.videoDesc, 
+					videoThumbnail: this.state.video.videoThumbnail,
+					comments: this.state.video.comments.concat(json)
 				},
 				comments: ''
 			})
@@ -75,8 +103,8 @@ class VideoPage extends Component {
 
 	render() {
 		
-		let commentsResult = this.state.videos.comments
-		? this.state.videos.comments.map(comment => {
+		let commentsResult = this.state.video.comments
+		? this.state.video.comments.map(comment => {
 			return (
 				<div key={comment._id}>
 					<p>Name:{comment.name}</p>
@@ -91,14 +119,15 @@ class VideoPage extends Component {
 
 		return (
 			<div>
-				<iframe title={this.state.videos.title} type="text/html" width="100%" height="400"
-			    src={this.state.videos.videoUrl}
+				<Navbar />
+				<iframe title={this.state.video.title} type="text/html" width="100%" height="400"
+			    src={this.state.video.videoUrl}
 			    frameBorder="0" />
-			    <h4><strong>Title: {this.state.videos.title}</strong></h4>
-			    <h4><strong>Artist: {this.state.videos.artist}</strong></h4>
+			    <h4><strong>Title: { this.state.video.title }</strong></h4>
+			    <h4><strong>Artist: { this.state.video.artist }</strong></h4>
+			    <button className="material-icons prefix" onClick={this.handleVotes}>favorite</button><span><p>{this.state.video.votes}</p></span>
 			    <hr/>
 			    <h4>Comments...</h4>
-			    {commentsResult}
 
 			    <div className="row">
 				   <form className="col s12" onSubmit={this.createComment}>
@@ -130,11 +159,12 @@ class VideoPage extends Component {
 
 				       </div>
 				     </div>
-				     <button className="btn-floating btn-large waves-effect waves-light red"><i className="material-icons">add</i></button>
+				     <button className="btn-floating btn-large waves-effect waves-light"><i className="material-icons">add</i></button>
 				   </form>
 				 </div>
 
 
+				 {commentsResult}
 
 			</div>
 		);

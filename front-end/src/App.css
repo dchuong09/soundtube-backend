@@ -1,0 +1,6 @@
+.btn-floating, .btn-floating:hover {
+	background-color: #960004;
+}
+.row:visited, .row:hover, .row:active, .row:focus-within,  {
+	color: #960004;
+}

@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import Navbar from '../components/Navbar';
-import VideoPage from './VideoPage';
 import {Link} from 'react-router-dom';
 
 class VideosPage extends Component {
