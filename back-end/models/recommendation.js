@@ -3,7 +3,8 @@ const mongoose = require('mongoose');
 
 const RecommendationSchema = new Schema({
 	name: String,
-	recommendations: String
+	recommendations: String,
+	
 })
 
 const Recommendation = mongoose.model('Recommendation', RecommendationSchema);
