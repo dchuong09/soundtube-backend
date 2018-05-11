@@ -7,6 +7,7 @@ const recommendationController = require('../controllers/recommendationControlle
 // Video Routes
 router.get('/api/videos', videoController.index);
 router.get('/api/videos/:video_id', videoController.show);
+router.put('/api/videos/:video_id', videoController.update);
 
 // Comment Routers 
 router.get('/api/videos/:video_id/comments', commentController.index);

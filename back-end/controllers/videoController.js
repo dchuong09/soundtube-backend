@@ -15,7 +15,15 @@ function show(req, res) {
 	})
 }
 
+function update(req, res) {
+	Video.findByIdAndUpdate(req.params.video_id, {$set: req.body}, function(err, foundVideo) {
+		if (err) console.log('Video update controller err: ', err);
+		res.json(foundVideo);
+	})
+}
+
 module.exports = {
 	index: index, 
-	show: show
+	show: show,
+	update: update
 }
