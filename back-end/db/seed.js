@@ -28,24 +28,27 @@ const recommendationsData = [{
 const videosData = [{
 	title: 'PYNK',
 	category: 'music',
+	artist: 'Armin',
 	votes: 5,
-	videoUrl: 'https://www.youtube.com/watch?v=PaYvlVR_BEc',
+	videoUrl: 'https://www.youtube.com/embed/mfJC34tOZms',
 	videoDesc: 'blah blah',
 	videoThumbnail: 'blah', 
 	comments: [commentsData[0]]
 }, {
 	title: 'This is America',
 	category: 'music',
+	artist: 'Armin',
 	votes: 12,
-	videoUrl: 'https://www.youtube.com/watch?v=VYOjWnS4cMY',
+	videoUrl: 'https://www.youtube.com/embed/mfJC34tOZms',
 	videoDesc: 'blah blah',
 	videoThumbnail: 'blah', 
 	comments: [commentsData[2]]
 }, {
 	title: 'Mirage',
 	category: 'music',
+	artist: 'Armin',
 	votes: 2,
-	videoUrl: 'https://www.youtube.com/watch?v=mfJC34tOZms',
+	videoUrl: 'https://www.youtube.com/embed/mfJC34tOZms',
 	videoDesc: 'blah blah',
 	videoThumbnail: 'blah', 
 	comments: [commentsData[1]]
