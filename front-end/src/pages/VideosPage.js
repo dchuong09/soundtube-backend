@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import Navbar from '../components/Navbar';
-
+import VideoPage from './VideoPage';
+import {Link} from 'react-router-dom';
 
 class VideosPage extends Component {
 
@@ -23,6 +24,7 @@ class VideosPage extends Component {
 			return (
 				<div key={video._id}>
 				
+					<Link to={`/api/videos/${video._id}`}>
 			        <div className="row">
 					    <div className="col s12 m7">
 					      <div className="card">
@@ -42,7 +44,8 @@ class VideosPage extends Component {
 					      </div>
 					    </div>
 					  </div>
-        
+        			</Link>
+
 				</div>
 			);
 		})	
