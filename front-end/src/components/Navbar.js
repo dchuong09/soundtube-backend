@@ -10,7 +10,7 @@ const Navbar = () => {
 		      <Link to='/api/videos'  className="brand">SOUNDTUBE</Link>
 		      <ul id="nav-mobile" className="right hide-on-med-and-down">
 		        <li><Link to='/api/recommendations'>Recommended</Link></li>
-		        <li><Link to='/api/videos'>Trending</Link></li>
+		        <li><Link to='/api/videos/trending'>Trending</Link></li>
 		      </ul>
 		    </div>
 		</nav>
