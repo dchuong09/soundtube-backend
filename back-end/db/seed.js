@@ -27,7 +27,7 @@ const recommendationsData = [{
 // Video Data
 const videosData = [{
 	title: 'Fractures (feat. Nevve)',
-	category: 'music',
+	category: 'tut',
 	artist: 'Illenium',
 	votes: 4,
 	videoUrl: 'https://www.youtube.com/embed/ZCu2gwLj9ok',
@@ -45,7 +45,7 @@ const videosData = [{
 	comments: [commentsData[2]]
 }, {
 	title: 'Where Are Ü Now',
-	category: 'music',
+	category: 'tut',
 	artist: 'Skrillex and Diplo',
 	votes: 2,
 	videoUrl: 'https://www.youtube.com/embed/nntGTK2Fhb0',
@@ -72,7 +72,7 @@ const videosData = [{
 	comments: [commentsData[1]]
 }, {
 	title: 'Church',
-	category: 'music',
+	category: 'tut',
 	artist: 'Alison Wonderland',
 	votes: 2,
 	videoUrl: 'https://www.youtube.com/embed/GJlGYmPAV3Q',
