@@ -5,7 +5,7 @@
 	color: #960004;
 }
 .card-content {
-	height: 10px;
+	height: 75px;
 	width: 200px;
 }
 .cardIfo {
@@ -29,7 +29,7 @@
 }
 
 /* Style the buttons that are used to open the tab content */
-.tab button {
+.tab-button {
     background-color: inherit;
     float: left;
     border: none;

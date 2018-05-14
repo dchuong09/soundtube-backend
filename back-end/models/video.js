@@ -8,8 +8,6 @@ const VideoSchema = new Schema({
 	artist: String, 
 	votes: Number,
 	videoUrl: String, 
-	videoDesc: String, 
-	videoThumbnail: String,
 	comments: [Comment.schema]
 })
 
