@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import Navbar from '../components/Navbar';
+import '../styles/rec.css'
 
 class RecommendationForm extends Component {
 
@@ -57,7 +58,11 @@ class RecommendationForm extends Component {
 		? this.state.storage.map(result => {
 			return (
 				<div key={result._id}>
-					<h5>{result.name} - {result.recommendations}</h5>
+					<div className="recs center-align">
+						<h5>{result.name}</h5>
+						<hr /> 
+						<h6>{result.recommendations}</h6>
+					</div>
 				</div>
 			);
 		})
@@ -73,31 +78,29 @@ class RecommendationForm extends Component {
 					       <div className="input-field col s6">
 					         <i className="material-icons prefix">account_circle</i>
 
-
 					         <input 
 					           id="icon_prefix" 
 					           type="text" 
-					           className="validate"
+					           className="materialize-textarea"
 					           autoFocus={this.props.autoFocus}
 					           onChange={this.handleNameChange}
 					           value={this.state.name} 
-					           placeholder="Name" />
+					           placeholder="Name"/>
 
 					       </div>
 					       <div className="input-field col s6">
 					         <i className="material-icons prefix">mode_edit</i>
-
 
 					         <input 
 					           id="icon_prefix2" 
 					           className="materialize-textarea"
 					           onChange={this.handleRecChange}
 					           value={this.state.rec} 
-					           placeholder="Recommendations..." />
+					           placeholder="Recommendations..."/>
 
 					       </div>
 					     </div>
-					     <button className="btn-floating btn-large waves-effect waves-light"><i className="material-icons">add</i></button>
+					     <button className="btn-floating btn-small waves-effect waves-light"><i className="material-icons">add</i></button>
 					   </form>
 					 </div>
 

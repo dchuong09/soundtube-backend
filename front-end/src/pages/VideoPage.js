@@ -99,9 +99,10 @@ class VideoPage extends Component {
 		let commentsResult = this.state.video.comments
 		? this.state.video.comments.map(comment => {
 			return (
-				<div key={comment._id}>
-					<p>Name:{comment.name}</p>
-					<p>Comments: {comment.comments}</p>
+				<div className='commentContainer'>
+					<div key={comment._id} className="comments">
+						<p>{comment.name}: {comment.comments} </p>
+					</div>
 				</div>
 			);
 		  })
