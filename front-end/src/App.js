@@ -6,9 +6,12 @@ import VideosPage from './pages/VideosPage';
 import VideoPage from './pages/VideoPage';
 import RecommendationPage from './pages/RecommendationPage';
 import TrendingPage from './pages/TrendingPage';
+// import VideosMusicPage from './pages/VideosMusicPage';
+// import VideosTutorialPage from './pages/VideosTutorialPage';
 
 class App extends Component {
 
+            
   render() {
     return (
       <div>

@@ -19,9 +19,8 @@ class VideosPage extends Component {
 		  .catch(err => console.log('VideosPage get data: ', err))
 	};
 
-	// <iframe title={video.title} type="text/html" width="180" height="100"
-	// 						      src={video.videoUrl}
-	// 						      frameBorder="0" />
+
+
 	render() {
 		let videosResult = this.state.videos.map(video => {
 			return (
@@ -60,14 +59,8 @@ class VideosPage extends Component {
 		return (
 			<div>
 				<Navbar />
-				<div className="row">
-					<div className="tab">
-					  <button className="tablinks col s4" onclick="openCity(event, 'London')">ALL</button>					  
-					  <button className="tablinks col s4" onclick="openCity(event, 'Paris')">MUSIC</button>
-					  <button className="tablinks col s4" onclick="openCity(event, 'Tokyo')">TUTORIAL</button>
-					</div>
-				</div>
 				{videosResult}
+
 			</div>
 		);
 	}
