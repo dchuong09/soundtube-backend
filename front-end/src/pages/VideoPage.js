@@ -77,13 +77,8 @@ class VideoPage extends Component {
 			
 			this.setState({
 				video: {
-					title: this.state.title, 
-					category: this.state.category,
-					artist: this.state.artist, 
-					votes: this.state.votes,
-					videoUrl: this.state.videoUrl,
-					 
-					comments: this.state.video.comments.concat(json)
+					...this.state.video, 
+					comments: [...this.state.video.comments, json]
 				},
 				name: '',
 				comments: '',
@@ -101,7 +96,7 @@ class VideoPage extends Component {
 			return (
 				<div className='commentContainer'>
 					<div key={comment._id} className="comments">
-						<p>{comment.name}: {comment.comments} </p>
+						<p><strong>{comment.name}</strong>: {comment.comments} </p>
 					</div>
 				</div>
 			);

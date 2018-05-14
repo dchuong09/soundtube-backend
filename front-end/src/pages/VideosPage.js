@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import Navbar from '../components/Navbar';
 import {Link} from 'react-router-dom';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-import 'react-tabs/style/react-tabs.css';
+// import 'react-tabs/style/react-tabs.css';
 const _ = require('underscore');
 
 class VideosPage extends Component {
