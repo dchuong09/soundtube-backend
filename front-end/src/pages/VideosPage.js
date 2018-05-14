@@ -109,7 +109,7 @@ class VideosPage extends Component {
 				<div className='row'>
 					 <Tabs className='tab'>
 					 	<div className='tabBar'>
-					        <TabList>
+					        <TabList className='tabList'>
 					          <Tab  className='col s4 center-align'>All</Tab>
 					          <Tab  className='col s4 center-align'>Music</Tab>
 					          <Tab  className='col s4 center-align'>Tutorials</Tab>
