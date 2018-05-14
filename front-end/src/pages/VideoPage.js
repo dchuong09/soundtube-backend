@@ -81,7 +81,8 @@ class VideoPage extends Component {
 					category: this.state.category,
 					artist: this.state.artist, 
 					votes: this.state.votes,
-					videoUrl: this.state.videoUrl, 
+					videoUrl: this.state.videoUrl,
+					 
 					comments: this.state.video.comments.concat(json)
 				},
 				name: '',
