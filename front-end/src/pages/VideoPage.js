@@ -77,13 +77,7 @@ class VideoPage extends Component {
 			
 			this.setState({
 				video: {
-					title: this.state.video.title, 
-					category: this.state.video.category,
-					artist: this.state.video.artist, 
-					votes: this.state.video.votes,
-					videoUrl: this.state.video.videoUrl, 
-					videoDesc: this.state.video.videoDesc, 
-					videoThumbnail: this.state.video.videoThumbnail,
+					...video,
 					comments: this.state.video.comments.concat(json)
 				},
 				comments: ''
@@ -107,17 +101,13 @@ class VideoPage extends Component {
 		  })
 		: <h2>Loading...</h2>
 
-
-
-
 		return (
 			<div>
 				<Navbar />
 				<iframe title={this.state.video.title} type="text/html" width="100%" height="400"
 			    src={this.state.video.videoUrl}
 			    frameBorder="0" />
-			    <h4><strong> {this.state.video.artist } -  { this.state.video.title }</strong></h4>
-			    
+			    <h4><strong> {this.state.video.artist } -  { this.state.video.title }</strong></h4>			
 			    <i className="material-icons prefix" onClick={this.handleVotes}>favorite</i><span><p>{this.state.video.votes}</p></span>
 			    <hr/>
 			    <h4>Comments...</h4>
@@ -125,10 +115,9 @@ class VideoPage extends Component {
 			    <div className="row">
 				   <form className="col s12" onSubmit={this.createComment}>
 				     <div className="row">
+
 				       <div className="input-field col s6">
 				         <i className="material-icons prefix">account_circle</i>
-
-
 				         <input 
 				           id="icon_prefix" 
 				           type="text" 
@@ -137,25 +126,22 @@ class VideoPage extends Component {
 				           onChange={this.handleNameChange}
 				           value={this.state.name} 
 				           placeholder="Name" />
-
 				       </div>
+
 				       <div className="input-field col s6">
 				         <i className="material-icons prefix">mode_edit</i>
-
-
 				         <input 
 				           id="icon_prefix2" 
 				           className="materialize-textarea"
 				           onChange={this.handleCommentChange}
 				           value={this.state.comment} 
 				           placeholder="Comment..." />
-
 				       </div>
+
 				     </div>
 				     <button className="btn-floating btn-small waves-effect waves-light"><i className="material-icons">add</i></button>
 				   </form>
 				 </div>
-
 
 				 {commentsResult}
 

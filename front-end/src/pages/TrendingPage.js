@@ -21,38 +21,28 @@ class TrendingPage extends Component {
 	render() {
 		let trendingResults = this.state.videos 
 		? this.state.videos.filter(video => {
-			return video.votes > 3;
+			return video.votes > 10;
 		}).map(video => {
 			return (
 				<div key={video._id} className='videosCardss'>
-					
-
 			        <div className="row">
-					      	
 					    <div className="col s12">
-
 					    	<div className="cardss">
 						        <div className="card-imagess">
 						          <iframe title={video.title} type="text/html" width="200" height="100"
 							      src={video.videoUrl}
 							      frameBorder="0" />
-						       	  	
 						        </div>
-						        
-							        <div className="card-contentss ">
-							        	<div className='cardIfoss'>
-										  <p>{video.title}</p>
-								          <p>{video.artist}</p>
-								          <p>{video.votes}</p>
-							            </div>
-							        </div>
-					        
-					
+						        <div className="card-contentss ">
+						        	<div className='cardIfoss'>
+									  <p>{video.title}</p>
+							          <p>{video.artist}</p>
+							          <p>{video.votes}</p>
+						            </div>
+						        </div>
 					      </div>
 					    </div>
 					  </div>
-    				
-
 				</div>
 			);
 		})
