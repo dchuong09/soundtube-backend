@@ -77,10 +77,15 @@ class VideoPage extends Component {
 			
 			this.setState({
 				video: {
-					...video,
+					title: this.state.title, 
+					category: this.state.category,
+					artist: this.state.artist, 
+					votes: this.state.votes,
+					videoUrl: this.state.videoUrl, 
 					comments: this.state.video.comments.concat(json)
 				},
-				comments: ''
+				name: '',
+				comments: '',
 			})
 	         
 		})
@@ -110,7 +115,7 @@ class VideoPage extends Component {
 			    <h4><strong> {this.state.video.artist } -  { this.state.video.title }</strong></h4>			
 			    <i className="material-icons prefix" onClick={this.handleVotes}>favorite</i><span><p>{this.state.video.votes}</p></span>
 			    <hr/>
-			    <h4>Comments...</h4>
+			    <h5>Comments</h5>
 
 			    <div className="row">
 				   <form className="col s12" onSubmit={this.createComment}>
@@ -134,7 +139,7 @@ class VideoPage extends Component {
 				           id="icon_prefix2" 
 				           className="materialize-textarea"
 				           onChange={this.handleCommentChange}
-				           value={this.state.comment} 
+				           value={this.state.comments} 
 				           placeholder="Comment..." />
 				       </div>
 
