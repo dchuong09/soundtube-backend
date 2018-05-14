@@ -1,0 +1,13 @@
+label:focus {
+     border-bottom: 1px solid #b71c1c;
+     box-shadow: 0 1px 0 0 #b71c1c;
+   }
+
+.recs {
+	border-radius: 8px;
+    padding: 10px;
+    width: 60em;
+   	margin-top: 3em;
+   	display: inline-block;
+   	box-shadow: 6px 4px 18px grey;
+}
