@@ -74,13 +74,6 @@ class VideoPage extends Component {
 		}).then(res => {
 			return res.json();
 		}).then(json => {
-			// this.setState({
-			// 	videos: {
-			// 		comments: this.state.videos.comments.concat(json)
-			// 	},
-			// 	name: '',
-			// 	comments: ''
-			// })
 			
 			this.setState({
 				video: {
@@ -123,9 +116,9 @@ class VideoPage extends Component {
 				<iframe title={this.state.video.title} type="text/html" width="100%" height="400"
 			    src={this.state.video.videoUrl}
 			    frameBorder="0" />
-			    <h4><strong>Title: { this.state.video.title }</strong></h4>
-			    <h4><strong>Artist: { this.state.video.artist }</strong></h4>
-			    <button className="material-icons prefix" onClick={this.handleVotes}>favorite</button><span><p>{this.state.video.votes}</p></span>
+			    <h4><strong> {this.state.video.artist } -  { this.state.video.title }</strong></h4>
+			    
+			    <i className="material-icons prefix" onClick={this.handleVotes}>favorite</i><span><p>{this.state.video.votes}</p></span>
 			    <hr/>
 			    <h4>Comments...</h4>
 
@@ -159,7 +152,7 @@ class VideoPage extends Component {
 
 				       </div>
 				     </div>
-				     <button className="btn-floating btn-large waves-effect waves-light"><i className="material-icons">add</i></button>
+				     <button className="btn-floating btn-small waves-effect waves-light"><i className="material-icons">add</i></button>
 				   </form>
 				 </div>
 

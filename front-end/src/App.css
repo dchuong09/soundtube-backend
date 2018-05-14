@@ -4,3 +4,55 @@
 .row:visited, .row:hover, .row:active, .row:focus-within,  {
 	color: #960004;
 }
+.card-content {
+	height: 10px;
+	width: 200px;
+}
+.cardIfo {
+	font-size: 11px;
+	margin-top: -20px;
+	margin-left: -12px;
+}
+.brand {
+	margin-left: 10px;
+	font-size: 20px;
+}
+.videosCard {
+	display: inline-block;
+}
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #ffffff;
+    font-size: 20px;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}

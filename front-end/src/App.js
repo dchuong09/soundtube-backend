@@ -9,7 +9,7 @@ import RecommendationPage from './pages/RecommendationPage';
 class App extends Component {
   render() {
     return (
-      <div className="">
+      <div>
 
         <main>
           <Switch>

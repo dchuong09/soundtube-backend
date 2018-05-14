@@ -26,29 +26,74 @@ const recommendationsData = [{
 
 // Video Data
 const videosData = [{
-	title: 'PYNK',
+	title: 'Fractures (feat. Nevve)',
 	category: 'music',
-	artist: 'Armin',
-	votes: 5,
-	videoUrl: 'https://www.youtube.com/embed/mfJC34tOZms',
+	artist: 'Illenium',
+	votes: 4,
+	videoUrl: 'https://www.youtube.com/embed/ZCu2gwLj9ok',
 	videoDesc: 'blah blah',
 	videoThumbnail: 'blah', 
 	comments: [commentsData[0]]
 }, {
-	title: 'This is America',
+	title: 'There For You (Official Video)',
 	category: 'music',
-	artist: 'Armin',
+	artist: 'Martin Garrix & Troye Sivan',
 	votes: 12,
-	videoUrl: 'https://www.youtube.com/embed/mfJC34tOZms',
-	videoDesc: 'blah blah',
+	videoUrl: 'https://www.youtube.com/embed/pNNMr5glICM',
+	videoDesc: "'So Far Away' out now on Spotify and Apple Music: http://stmpdrcrds.lnk.to/dlThV",
 	videoThumbnail: 'blah', 
 	comments: [commentsData[2]]
 }, {
-	title: 'Mirage',
+	title: 'Where Are Ü Now',
 	category: 'music',
-	artist: 'Armin',
+	artist: 'Skrillex and Diplo',
 	votes: 2,
-	videoUrl: 'https://www.youtube.com/embed/mfJC34tOZms',
+	videoUrl: 'https://www.youtube.com/embed/nntGTK2Fhb0',
+	videoDesc: 'blah blah',
+	videoThumbnail: 'blah', 
+	comments: [commentsData[1]]
+}, {
+	title: 'Gassed Up',
+	category: 'music',
+	artist: 'Jauz & DJ Snake',
+	votes: 2,
+	videoUrl: 'https://www.youtube.com/embed/8wh0sZFZNoI',
+	videoDesc: 'blah blah',
+	videoThumbnail: 'blah', 
+	comments: [commentsData[1]]
+}, {
+	title: 'BOOM (Official Video)',
+	category: 'music',
+	artist: 'Tiësto & Sevenn',
+	votes: 2,
+	videoUrl: 'https://www.youtube.com/embed/tSJSVmfaMCs',
+	videoDesc: 'blah blah',
+	videoThumbnail: 'blah', 
+	comments: [commentsData[1]]
+}, {
+	title: 'Church',
+	category: 'music',
+	artist: 'Alison Wonderland',
+	votes: 2,
+	videoUrl: 'https://www.youtube.com/embed/GJlGYmPAV3Q',
+	videoDesc: 'blah blah',
+	videoThumbnail: 'blah', 
+	comments: [commentsData[1]]
+}, {
+	title: 'Call Out My Name',
+	category: 'music',
+	artist: 'The Weeknd',
+	votes: 2,
+	videoUrl: 'https://www.youtube.com/embed/M4ZoCHID9GI',
+	videoDesc: 'blah blah',
+	videoThumbnail: 'blah', 
+	comments: [commentsData[1]]
+}, {
+	title: ' "Adieu" OFFICIAL VERSION',
+	category: 'music',
+	artist: 'Tchami',
+	votes: 2,
+	videoUrl: 'https://www.youtube.com/embed/kr0_YzOQf5A',
 	videoDesc: 'blah blah',
 	videoThumbnail: 'blah', 
 	comments: [commentsData[1]]
