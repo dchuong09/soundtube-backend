@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import Navbar from '../components/Navbar';
 import {Link} from 'react-router-dom';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-import '../App.css'
 import 'react-tabs/style/react-tabs.css';
 const _ = require('underscore');
 
@@ -109,11 +108,13 @@ class VideosPage extends Component {
 				<Navbar />
 				<div className='row'>
 					 <Tabs className='tab'>
-				        <TabList >
-				          <Tab  className='col s4 center-align'>All</Tab>
-				          <Tab  className='col s4 center-align'>Music</Tab>
-				          <Tab  className='col s4 center-align'>Tutorials</Tab>
-				        </TabList>
+					 	<div className='tabBar'>
+					        <TabList>
+					          <Tab  className='col s4 center-align'>All</Tab>
+					          <Tab  className='col s4 center-align'>Music</Tab>
+					          <Tab  className='col s4 center-align'>Tutorials</Tab>
+					        </TabList>
+				        </div>
 
 				        <TabPanel>
 				          {_.shuffle(videosResult)}
@@ -126,6 +127,7 @@ class VideosPage extends Component {
 				         <TabPanel>
 				          {_.shuffle(tutorialVideosResult)}
 				        </TabPanel>
+
 				    </Tabs>
 				</div>
 			</div>

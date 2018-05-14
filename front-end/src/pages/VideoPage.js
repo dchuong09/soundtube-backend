@@ -113,10 +113,14 @@ class VideoPage extends Component {
 				<iframe title={this.state.video.title} type="text/html" width="100%" height="400"
 			    src={this.state.video.videoUrl}
 			    frameBorder="0" />
-			    <h4><strong> {this.state.video.artist } -  { this.state.video.title }</strong></h4>			
-			    <i className="material-icons prefix" onClick={this.handleVotes}>favorite</i><span><p>{this.state.video.votes}</p></span>
-			    <hr/>
-			    <h5>Comments</h5>
+			    <div className='row'>
+			    	<div className='videoTitle'>
+					    <h4><strong>{this.state.video.artist } -  { this.state.video.title }</strong></h4>
+				    	<p onClick={this.handleVotes}><span className='heart customPointer'> &hearts; </span>{this.state.video.votes}</p>
+					</div>
+				    <hr />
+					
+			    </div>
 
 			    <div className="row">
 				   <form className="col s12" onSubmit={this.createComment}>

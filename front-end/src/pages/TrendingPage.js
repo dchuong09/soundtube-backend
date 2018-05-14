@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import Navbar from '../components/Navbar';
-
+import '../styles/trendingCss.css';
+import {Link} from 'react-router-dom';
 
 class TrendingPage extends Component {
 	
@@ -24,25 +25,20 @@ class TrendingPage extends Component {
 			return video.votes > 10;
 		}).map(video => {
 			return (
-				<div key={video._id} className='videosCardss'>
+				<div key={video._id} className='cardVideos'>
 			        <div className="row">
-					    <div className="col s12">
-					    	<div className="cardss">
-						        <div className="card-imagess">
-						          <iframe title={video.title} type="text/html" width="200" height="100"
-							      src={video.videoUrl}
-							      frameBorder="0" />
-						        </div>
-						        <div className="card-contentss ">
-						        	<div className='cardIfoss'>
-									  <p>{video.title}</p>
-							          <p>{video.artist}</p>
-							          <p>{video.votes}</p>
-						            </div>
-						        </div>
-					      </div>
+					    <div className="col s3 offset-s2">
+				        	<iframe title={video.title} type="text/html" width="250" height="140"
+					        src={video.videoUrl}
+					        frameBorder="0" />
+					        <hr />
 					    </div>
+			        	<div className='videoInfo'>
+						    <Link to={`/api/videos/${video._id}`}><p>{video.title} - {video.artist}</p></Link>
+				            <p><span className='heart'> &hearts; </span>{video.votes}</p>
+			            </div>
 					  </div>
+					  
 				</div>
 			);
 		})
@@ -51,7 +47,7 @@ class TrendingPage extends Component {
 
 
 		return (
-			<div>
+			<div className='trendingPage'>
 				<Navbar />
 				<h1 className="center-align">Trending</h1>
 				{trendingResults}
