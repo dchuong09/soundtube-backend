@@ -11,3 +11,7 @@ label:focus {
    	display: inline-block;
    	box-shadow: 6px 4px 18px grey;
 }
+
+.rectitle {
+	font-family: 'Catamaran', sans-serif;
+}

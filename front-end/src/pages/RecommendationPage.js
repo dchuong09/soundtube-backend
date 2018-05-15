@@ -71,7 +71,7 @@ class RecommendationForm extends Component {
 		return (
 			<div> 
 				<Navbar />
-				<h1 className='center-align'>Recommendations</h1>
+				<h1 className='center-align rectitle'>Recommendations</h1>
 					<div className="row">
 					   <form className="col s12" onSubmit={this.createRec}>
 					     <div className="row">
