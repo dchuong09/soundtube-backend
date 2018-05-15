@@ -14,9 +14,12 @@ app.use(function(req, res, next) {
   next();
 });
 
-app.get('/', function(req,res){
-    res.send('Server running!!!')
-});
+// app.get('/', function(req,res){
+//     res.send('Server running!!!')
+// });
+app.get('/api/videos', function(req, res) {
+	res.json();
+})
 
 app.use(soundtubeRouter);
 
