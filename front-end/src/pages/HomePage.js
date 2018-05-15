@@ -4,6 +4,7 @@ import '../styles/homepage.css';
 
 class HomePage extends Component {
 	render() {
+		console.log("Welcome!")
 		return (
 			<div className='container-fluid cube'>
 				<div className="homePage center-align">

@@ -15,3 +15,7 @@ label:focus {
 .rectitle {
 	font-family: 'Catamaran', sans-serif;
 }
+
+.recContainer {
+	margin-bottom: 50px;
+}
