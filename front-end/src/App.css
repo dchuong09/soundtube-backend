@@ -1,11 +1,11 @@
-.btn-floating, .btn-floating:hover {
-	background-color: #960004;
-}
-.row:visited, .row:hover, .row:active, .row:focus-within,  {
-	color: #960004;
+.logoname {
+  font-family: 'Anton', sans-serif;
+  letter-spacing: .2em;
+  font-size: 1.7em;
+  margin-left: .4em;
 }
 
-main{
+.cube{
   background: url(./imgs/cube.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -58,10 +58,6 @@ main{
     font-size: 20px;
     font-family: 'Catamaran', sans-serif;
 } 
-
-.tabList{
-    
-}
 
 .tabBar {
     margin-bottom: 4%;
