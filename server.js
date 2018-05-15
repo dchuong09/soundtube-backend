@@ -17,7 +17,7 @@ app.use(function(req, res, next) {
 // app.get('/', function(req,res){
 //     res.send('Server running!!!')
 // });
-app.get('/api/videos', function(req, res) {
+app.get('/', function(req, res) {
 	res.send('Yup, working...');
 })
 
