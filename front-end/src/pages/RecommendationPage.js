@@ -69,7 +69,7 @@ class RecommendationForm extends Component {
 		: <h2>Loading...</h2>
 
 		return (
-			<div> 
+			<div className="recContainer"> 
 				<Navbar />
 				<h1 className='center-align rectitle'>Recommendations</h1>
 					<div className="row">
