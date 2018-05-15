@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 // Map Global Promise to Resolve Mongo Promise Warning
 mongoose.Promise = global.Promise;
-mongoose.connect("mongodb://localhost/soundtube-mern")
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/soundtube-mern")
   .then(() => console.log('Mongodb connected...'))
   .catch(err => console.log(err));
 
