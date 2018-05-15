@@ -1,8 +1,18 @@
-.btn-floating, .btn-floating:hover {
-	background-color: #960004;
+.logoname {
+  font-family: 'Anton', sans-serif;
+  letter-spacing: .2em;
+  font-size: 1.7em;
+  margin-left: .4em;
 }
-.row:visited, .row:hover, .row:active, .row:focus-within,  {
-	color: #960004;
+
+.cube{
+  background: url(./imgs/cube.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 1000px;
+  margin-top: -40px;
 }
 
 /*Cards*/
@@ -42,6 +52,12 @@
 }
 
 /* Style the tab */
+.tab {
+    overflow: hidden;
+    border: 5px solid #DFB8B8;
+    font-size: 20px;
+    font-family: 'Catamaran', sans-serif;
+} 
 
 .tabBar {
     margin-bottom: 4%;
