@@ -12,7 +12,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <main>
+        <main className="cube">
           <Switch>
             <Route exact path='/' component={HomePage} />
             <Route exact path='/api/videos' component={VideosPage} />
