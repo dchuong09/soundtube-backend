@@ -14,13 +14,13 @@ app.use(function(req, res, next) {
   next();
 });
 
-// app.get('/', function(req,res){
-//     res.send('Server running!!!')
-// });
+
 app.get('/', function(req, res) {
 	res.send('Yup, working...');
 })
 
+
+// App routes
 app.use(soundtubeRouter);
 
 ///LISTEN HERE
